@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>list</title>
+
+</head>
+<body>
+<div class="container">
+    <h2>list of items</h2>
+     <table style="...." border="2">
+         <th>id</th>
+         <th>name</th>
+         <th>price</th>
+         <th>description</th>
+         {%  for i in data %}
+         <tr>
+             <td>{{ i[0] }}</td>
+             <td>{{ i[1] }}</td>
+             <td>{{ i[2] }}</td>
+             <td>{{ i[3] }}</td>
+         <td><a href="/updatelist?id={{ i[0] }}">Status</a> </td>
+
+         </tr>
+         {% endfor %}
+     </table>
+</div>
+</body>
+</html>
